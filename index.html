@@ -64,10 +64,12 @@
 		path.attr('width', w);
 		path.attr('height', 300);
 		$('#yes').click(function(event) {
-			modal('我就知道小姐姐你一定会同意的。');
+			modal('我就知道小姐姐你一定会同意的。', function() {
+				
+			});
 		});
 		$('#no').click(function(event) {
-			modal('明日不说暗话！', A);
+			modal('明人不说暗话！', A);
 		});
 		// typeWrite();
 	});
