@@ -65,13 +65,13 @@
 		path.attr('height', 300);
 		$('#yes').click(function(event) {
 			modal('我就知道小姐姐你一定会同意的。', function() {
-				
+				typeWrite();
+				$('.page_one').addClass('hide');
 			});
 		});
 		$('#no').click(function(event) {
 			modal('明人不说暗话！', A);
 		});
-		// typeWrite();
 	});
 
 	function A() {
@@ -107,11 +107,11 @@
 	function modal(content, callback) {
 		var tpl = '<div class="container">'+
 								'<div class="mask"></div>'+
-									'<div class="modal">'+
-										'<p>'+ content +'</p>'+
-										'<button type="button" id="confirm" class="confirm">确定</button>'+
-									'</div>'+
-								'</div>';
+								'<div class="modal">'+
+									'<p>'+ content +'</p>'+
+									'<button type="button" id="confirm" class="confirm">确定</button>'+
+								'</div>'+
+							'</div>';
 		$('body').append(tpl);
 		$(document).on('click', '.confirm', function() {
 			$('.container').remove();
